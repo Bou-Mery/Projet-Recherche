@@ -28,7 +28,7 @@ public class ChambreSoapService {
     }
 
     @WebMethod
-    public Chambre createChambre(@WebParam(name = chambre") Chambre chambre) {
+    public Chambre createChambre(@WebParam(name = "chambre") Chambre chambre) {
         return chambreService.save(chambre);
     }
 
