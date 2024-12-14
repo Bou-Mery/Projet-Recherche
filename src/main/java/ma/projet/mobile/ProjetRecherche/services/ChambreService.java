@@ -27,4 +27,13 @@ public class ChambreService {
     public void delete(Long id) {
         chambreRepository.deleteById(id);
     }
+
+    public boolean deleteById(Long id) {
+        if (chambreRepository.existsById(id)) {
+            chambreRepository.deleteById(id);
+            return true;
+        }
+        return false;
+    }
+
 }

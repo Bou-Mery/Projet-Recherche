@@ -27,4 +27,12 @@ public class ReservationService {
     public void delete(Long id) {
         reservationRepository.deleteById(id);
     }
+
+    public boolean deleteById(Long id) {
+        if (reservationRepository.existsById(id)) {
+            reservationRepository.deleteById(id);
+            return true;
+        }
+        return false;
+    }
 }
