@@ -17,9 +17,15 @@ public class ClientSoapService {
     @Autowired
     private ClientService clientService;
 
+//    @WebMethod
+//    public List<Client> getClients() {
+//        return clientService.findAll();
+//    }
+
     @WebMethod
     public List<Client> getClients() {
-        return clientService.findAll();
+        List<Client> clients = clientService.findAll();
+        return clients;
     }
 
     @WebMethod

@@ -27,6 +27,11 @@ public class ChambreSoapService {
         return chambreService.findById(id);
     }
 
+//    @WebMethod
+//    public Chambre createChambre(@WebParam(name = "chambre") Chambre chambre) {
+//        return chambreService.save(chambre);
+//    }
+
     @WebMethod
     public Chambre createChambre(@WebParam(name = "chambre") Chambre chambre) {
         return chambreService.save(chambre);
